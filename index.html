@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>SUNNY | Official Music</title>
-    <!-- โหลดฟอนต์ภาษาไทยเพื่อความสวยงาม -->
+    <title>PONDERINGX | Official Music</title>
+    <!-- โหลดฟอนต์ภาษาไทย -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Prompt', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #fafafa; /* พื้นหลังสีขาวอมเทาอ่อนๆ ให้ดูสบายตา */
+            color: #4a4a4a; /* ตัวหนังสือสีเทาเข้ม (ไม่ดำสนิท จะได้ดูละมุน) */
             margin: 0;
             padding: 0;
             text-align: center;
         }
         header {
-            padding: 60px 20px 40px;
-            background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-            border-bottom: 2px solid #333;
+            padding: 50px 20px 40px;
+            /* ไล่สีพื้นหลังแบบพาสเทลน่ารักๆ */
+            background: linear-gradient(135deg, #ffe0e9, #fff3e0);
+            border-bottom: 3px dashed #ffb6c1; /* เส้นประสีชมพูอ่อนเพิ่มความคิวท์ */
+            border-radius: 0 0 30px 30px; /* ขอบด้านล่างโค้งมน */
         }
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 3em;
             letter-spacing: 2px;
-            color: #f39c12; /* สีเหลืองทอง สร้างความโดดเด่น */
+            color: #ff758c; /* สีชมพูอมแดงสดใส */
+            text-shadow: 2px 2px 0px #fff; /* เงาสีขาวให้ตัวหนังสือเด้งขึ้นมา */
         }
         header p {
-            color: #aaaaaa;
+            color: #7a7a7a;
             font-size: 1.1em;
             margin-top: 10px;
+            font-weight: 400;
         }
         .container {
             max-width: 800px;
@@ -37,33 +41,41 @@
             padding: 0 20px;
         }
         .song-card {
-            background-color: #1e1e1e;
-            border-radius: 12px;
+            background-color: #ffffff; /* การ์ดสีขาวล้วน */
+            border-radius: 24px; /* ขอบการ์ดโค้งมนมากๆ ให้ดูปุ๊กปิ๊ก */
             padding: 25px;
             margin-bottom: 35px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease;
+            /* เงาสีชมพูอ่อนๆ ฟุ้งๆ */
+            box-shadow: 0 10px 25px rgba(255, 117, 140, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #ffeef2;
         }
         .song-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px); /* เวลาเอาเมาส์ชี้ให้การ์ดลอยขึ้น */
+            box-shadow: 0 15px 35px rgba(255, 117, 140, 0.25);
         }
         .song-title {
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: 600;
             margin-bottom: 20px;
-            color: #e0e0e0;
+            color: #ff758c;
             text-align: left;
-            border-left: 4px solid #f39c12;
-            padding-left: 15px;
+            /* ตกแต่งหน้าชื่อเพลงด้วยจุดกลมๆ น่ารักๆ แทนเส้นทึบ */
+            display: flex;
+            align-items: center;
         }
-        /* กำหนดให้วิดีโอ YouTube ย่อขยายตามขนาดหน้าจอ (มือถือ/คอม) */
+        .song-title::before {
+            content: "🎵";
+            margin-right: 12px;
+            font-size: 1.2em;
+        }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
-            border-radius: 8px;
-            background-color: #000;
+            border-radius: 16px; /* ขอบวิดีโอโค้งมน */
+            background-color: #ffeef2; /* สีพื้นหลังรอก่อนวิดีโอโหลด */
         }
         .video-container iframe {
             position: absolute;
@@ -75,9 +87,10 @@
         }
         footer {
             padding: 30px;
-            background-color: #0a0a0a;
-            color: #555;
+            background-color: #fafafa;
+            color: #999;
             font-size: 0.9em;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -85,7 +98,7 @@
 
 <header>
     <h1>SUNNY</h1>
-    <p>Official Music & Videos</p>
+    <p>✨ Official Music & Videos ✨</p>
 </header>
 
 <div class="container">
@@ -94,16 +107,14 @@
     <div class="song-card">
         <div class="song-title">1. บ่มีสิทธิ์</div>
         <div class="video-container">
-            <!-- จุดที่ต้องแก้: เปลี่ยน YOUR_VIDEO_ID_1 เป็นรหัสวิดีโอของคุณ -->
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
     <!-- เพลงที่ 2 -->
     <div class="song-card">
-        <div class="song-title">2. อวยพรย้อนจำเป็น</div>
+        <div class="song-title">2. ອວຍພອນຍ້ອນຈຳເປັນ อวยพรย้อนจำเป็น</div>
         <div class="video-container">
-            <!-- จุดที่ต้องแก้: เปลี่ยน YOUR_VIDEO_ID_2 เป็นรหัสวิดีโอของคุณ -->
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
@@ -112,7 +123,6 @@
     <div class="song-card">
         <div class="song-title">3. เต้ยสั่งลา</div>
         <div class="video-container">
-            <!-- จุดที่ต้องแก้: เปลี่ยน YOUR_VIDEO_ID_3 เป็นรหัสวิดีโอของคุณ -->
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
@@ -120,7 +130,7 @@
 </div>
 
 <footer>
-    &copy; 2026 SUNNY. All Rights Reserved.
+    &copy; 2026 PONDERINGX. All Rights Reserved. 🤍
 </footer>
 
 </body>
